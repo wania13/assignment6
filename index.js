@@ -9,7 +9,19 @@
 // task9A()
 // task10A()
 // task11A()
-task12A()
+// task12A()
+// task13A()
+// task14A()
+// task15A()
+// task16A()
+// task17A()
+task18A()
+
+
+
+
+
+
 
 
 
@@ -122,3 +134,105 @@ function task12A(){
     var res = num.toString().replace(".","")
     alert(`No:${num}\nResult: ${res}`)
 }
+
+
+//task13
+function task13A(){
+    var username= prompt("enter username") ;
+
+    value= username.match(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/) ? true : false;
+    if(value){
+        alert("invalid username")
+    }
+    else{
+        alert("valid username")
+    }
+   
+}
+
+
+
+//task14
+function task14A(){
+    A = ["cake", "apple pie", "cookie", "chips", "patties"]
+    var order=prompt("which item you want to order from my bakery")
+    order=order.toLowerCase()
+    alert(`${order} is availbe at index ${A.indexOf(order)}`)
+}
+
+
+//task15
+function task15A(){
+    var password=prompt("please enter your password\na. It should contain alphabets and numbers\nb. It should not start with a number\nc. It must at least 6 characters long")
+    
+    if (!password.match(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/))
+    {
+        var firstchar=password.charAt(0)
+        
+        if(!firstchar.match(/[0-9]+/)){
+            if (password.length>=6 && password.match(/[a-zA-Z0-9]+/)){
+                alert("password accepted")
+            }
+            else{
+                alert("please enter valid password between alphabets and no and length should be more than 6")
+            }
+        }
+        else{
+            alert("please enter valid password that doesnot start with no")
+        }
+    }
+    else{
+        alert("please enter valid password no special character allowed")
+    }  
+}
+
+
+//task16
+function task16A(){
+    var university = "University of Karachi";
+    var universityarray=university.split('')
+    universityarray=universityarray.join('\r\n')
+    alert(universityarray)
+
+    
+}
+
+
+
+//task17
+function task17A(){
+    var myvar = prompt("enter any variable");
+
+    alert("last char is "+myvar.charAt(myvar.length-1))    
+}
+
+
+//task17
+function task17A(){
+    var myvar = prompt("enter any variable");
+
+    alert("last char is "+myvar.charAt(myvar.length-1))    
+}
+
+
+//task18
+function task18A(){
+    var myvar ="The quick brown fox jumps over the lazy dog"
+    myvar=myvar.toLowerCase()
+    alert(myvar.match(/the/g).length)    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
